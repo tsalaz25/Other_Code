@@ -1,0 +1,207 @@
+0000 1100
+0111 1111
+1000 0000
+1111 1111
+0010 1100
+0000 0001 0010 1100
+0000 0000 0000 0000 0000 0001 0010 1100
+0111 1111 1111 1111
+1000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0001 0010 1100
+0c
+7f
+80
+ff
+2c
+01 2c
+00 00 01 2c
+7f ff
+80 00
+00 00 00 00 00 00 01 2c
+ 42
+225
+   481
+ 3,855
+61,680
+       61,683
+   15,790,320
+4,294,967,295
+2a
+e1
+01 e1
+0f 0f
+f0 f0
+00 00 f0 f3
+00 f0 f0 f0
+ff ff ff ff
+ 42
+225
+   481
+ 3,855
+61,680
+       61,683
+   15,790,320
+             4,294,967,295
+1110 1111
+0001 0010 0011 0100 0101 0110 0111 1000 1001 0000 1010 1011 1100 1101 1110 1111
+ef
+12 34 56 78 90 ab cd ef
+210
+   722
+             1,234,567,890
+1111 0000
+0000 0000 0000 0000 0000 0001 1111 0000
+ERROR: argument 1 must be -inB | -inD | -inH
+usage:
+convert IN OUT SIZE NUMBER
+  IN:
+    -inB  NUMBER is binary.
+    -inD  NUMBER is decimal.
+    -inH  NUMBER is hexadecimal.
+
+  OUT:
+    -outB Output will be in binary.
+    -outD Output will be in decimal.
+    -outH Output will be in hexadecimal.
+
+  SIZE:
+    -8    input is an unsigned 8-bit integer.
+    -16   input is an unsigned 16-bit integer.
+    -32   input is an unsigned 32-bit integer.
+    -64   input is an unsigned 64-bit integer.
+
+  NUMBER:
+    number to be converted.
+
+ERROR: argument 2 must be -outB | -outD | -outH
+usage:
+convert IN OUT SIZE NUMBER
+  IN:
+    -inB  NUMBER is binary.
+    -inD  NUMBER is decimal.
+    -inH  NUMBER is hexadecimal.
+
+  OUT:
+    -outB Output will be in binary.
+    -outD Output will be in decimal.
+    -outH Output will be in hexadecimal.
+
+  SIZE:
+    -8    input is an unsigned 8-bit integer.
+    -16   input is an unsigned 16-bit integer.
+    -32   input is an unsigned 32-bit integer.
+    -64   input is an unsigned 64-bit integer.
+
+  NUMBER:
+    number to be converted.
+
+ERROR: argument 3 must be: -8 | -16 | -32 | -64
+usage:
+convert IN OUT SIZE NUMBER
+  IN:
+    -inB  NUMBER is binary.
+    -inD  NUMBER is decimal.
+    -inH  NUMBER is hexadecimal.
+
+  OUT:
+    -outB Output will be in binary.
+    -outD Output will be in decimal.
+    -outH Output will be in hexadecimal.
+
+  SIZE:
+    -8    input is an unsigned 8-bit integer.
+    -16   input is an unsigned 16-bit integer.
+    -32   input is an unsigned 32-bit integer.
+    -64   input is an unsigned 64-bit integer.
+
+  NUMBER:
+    number to be converted.
+
+ERROR: argument 4 is not a binary integer
+usage:
+convert IN OUT SIZE NUMBER
+  IN:
+    -inB  NUMBER is binary.
+    -inD  NUMBER is decimal.
+    -inH  NUMBER is hexadecimal.
+
+  OUT:
+    -outB Output will be in binary.
+    -outD Output will be in decimal.
+    -outH Output will be in hexadecimal.
+
+  SIZE:
+    -8    input is an unsigned 8-bit integer.
+    -16   input is an unsigned 16-bit integer.
+    -32   input is an unsigned 32-bit integer.
+    -64   input is an unsigned 64-bit integer.
+
+  NUMBER:
+    number to be converted.
+
+ERROR: argument 4 is not a decimal integer
+usage:
+convert IN OUT SIZE NUMBER
+  IN:
+    -inB  NUMBER is binary.
+    -inD  NUMBER is decimal.
+    -inH  NUMBER is hexadecimal.
+
+  OUT:
+    -outB Output will be in binary.
+    -outD Output will be in decimal.
+    -outH Output will be in hexadecimal.
+
+  SIZE:
+    -8    input is an unsigned 8-bit integer.
+    -16   input is an unsigned 16-bit integer.
+    -32   input is an unsigned 32-bit integer.
+    -64   input is an unsigned 64-bit integer.
+
+  NUMBER:
+    number to be converted.
+
+ERROR: argument 4 is not a hexadecimal integer
+usage:
+convert IN OUT SIZE NUMBER
+  IN:
+    -inB  NUMBER is binary.
+    -inD  NUMBER is decimal.
+    -inH  NUMBER is hexadecimal.
+
+  OUT:
+    -outB Output will be in binary.
+    -outD Output will be in decimal.
+    -outH Output will be in hexadecimal.
+
+  SIZE:
+    -8    input is an unsigned 8-bit integer.
+    -16   input is an unsigned 16-bit integer.
+    -32   input is an unsigned 32-bit integer.
+    -64   input is an unsigned 64-bit integer.
+
+  NUMBER:
+    number to be converted.
+
+ERROR: incorrect number of arguments
+usage:
+convert IN OUT SIZE NUMBER
+  IN:
+    -inB  NUMBER is binary.
+    -inD  NUMBER is decimal.
+    -inH  NUMBER is hexadecimal.
+
+  OUT:
+    -outB Output will be in binary.
+    -outD Output will be in decimal.
+    -outH Output will be in hexadecimal.
+
+  SIZE:
+    -8    input is an unsigned 8-bit integer.
+    -16   input is an unsigned 16-bit integer.
+    -32   input is an unsigned 32-bit integer.
+    -64   input is an unsigned 64-bit integer.
+
+  NUMBER:
+    number to be converted.
+

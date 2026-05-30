@@ -1,0 +1,9 @@
+total 36
+drwx------ 2 tsalaz25 precs  4096 Jan 26 11:58 .
+drwx------ 3 tsalaz25 precs  4096 Jan 25 18:19 ..
+-rwxr-xr-x 1 tsalaz25 precs 16008 Jan 26 11:58 a.out
+-rw------- 1 tsalaz25 precs   657 Jan 26 11:58 asciiArt.c
+-rw------- 1 tsalaz25 precs   656 Jan 26 11:58 asciiArt.c~
+-rw------- 1 tsalaz25 precs    36 Jan 25 19:41 out1.txt
+-rw------- 1 tsalaz25 precs     0 Jan 26 12:17 out2.txt
+-rw------- 1 tsalaz25 precs   374 Jan 25 19:40 tomas-salaz.txt

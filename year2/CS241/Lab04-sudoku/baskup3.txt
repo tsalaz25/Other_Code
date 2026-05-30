@@ -1,0 +1,128 @@
+#include <stdio.h>
+
+int checkRow(char sudoku[9][9], int row, char n){
+  int i;
+  for (i = 0; i < 9; i++){
+    if (sudoku[row][i] == n){
+      return 1;
+    }
+  }
+  return 0;
+}
+
+int checkCol(char sudoku[9][9], int col, char n){
+  int i;
+  for (i = 0; i < 9; i++){
+    if (sudoku[i][col] == n){
+      return 1;
+    }
+  }
+  return 0;
+}
+
+int checkBox(char sudoku[9][9], int row, int col, char n){
+  int i,j;
+  int boxRow = row - row % 3;
+  int boxCol = col - col % 3;
+
+  for (i = boxRow; i < boxRow + 3; i++){
+    for (j = boxCol; j < boxCol + 3; j++){
+      if (sudoku[i][j] == n){
+        return 1;
+      }
+    }
+  }
+  return 0;
+}
+
+
+int validCell(char sudoku[9][9], int row, int col, char n){
+  return (checkRow(sudoku,row,n) &&
+          checkCol(sudoku,col,n) &&
+          checkBox(sudoku,row,col,n));
+}
+
+void boardSolved (char solved[9][9]){
+  int row, col;
+  for (row = 0 ; row < 9; row++){
+    for (col = 0; col < 9; col++){
+      printf("%c", solved[row][col]);
+    }
+  }
+  printf("\n\n");
+}
+
+int solve (char sudoku[9][9], int r, int c){
+  int n;
+  if (r == 9+1 && c == 9){
+    boardSolved(sudoku);
+    return 1;
+  }
+  if (c == 9){
+    r++;
+    c = 0;
+  }
+  if (sudoku[r][c] != 46){return(solve(sudoku,r,c+1));}
+
+  for (n = 48; n <= 57; n++){
+    if(validCell (sudoku,r,c,n) == 1){
+      sudoku[r][c] = n;
+      if (solve(sudoku,r,c+1) == 1){
+        boardSolved(sudoku);
+        return 1;
+      }
+    }
+    sudoku[r][c] = 46;
+  }
+  return 0;
+}
+
+int main (){
+  char lineIn[100]; /*assumse a line is <100 chars*/
+  char sudoku[9][9];
+  char c;
+  int numchars ,i, j, k, row, col, x, y;
+  numchars = i = j = k = 0;
+  while ((c = getchar()) != EOF){
+    printf("%c",c);
+    lineIn[i] = c;
+    i++;
+
+    if ((c >= '1' && c <= '9') || c == '.'){
+      numchars++;
+    } else if (c == '\n'){
+      if (numchars == 81){
+        numchars = 0;
+        /*put into 2D array and solve then clear 2d array*/
+        for(row = 0; row < 9; row++){
+          for (col = 0; col < 9; col++){
+            sudoku[row][col] = lineIn[j];
+            j++;
+          }
+        }
+        if (!solve(sudoku,0,0)){
+          printf("Error: Not Solvable\n\n");
+        }
+      } else {
+        numchars = 0;
+        /*print error message and reset line in*/
+        printf("Error: Input\n\n");
+      }
+      /*condition is set once we have solved*/
+      if (numchars == 0){
+        /*resetting linIn and Sudoku*/
+        for (x = 0; x < 9; x++){
+          for (y = 0; y < 9; y++){
+            sudoku[x][y] = 0;
+          }
+        }
+        while (k < sizeof(lineIn)){
+          lineIn[k] = 0;
+          k++;
+        }
+        i = j = k = 0;
+      }
+    }
+  }
+  return 0;
+}

@@ -1,0 +1,9 @@
+cipher: cipher.c lcg.c lcg.h
+	gcc -o cipher cipher.c lcg.c
+
+testlcg: testlcg.c lcg.c lcg.h
+	gcc -o testlcg testlcg.c lcg.c
+
+compile and check:
+./cipher < cipherdata.in > output.txt
+diff output.txt cipherdata.out

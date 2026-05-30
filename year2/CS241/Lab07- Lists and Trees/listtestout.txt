@@ -1,0 +1,17 @@
+empty list: 
+filled list: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W
+list length = 23
+filled stack: R, A, G, M, S, B, H, N, T, C, I, O, U, D, J, P, V, E, K, Q, W, F, L
+stack size = 23
+remove did not find =
+remove did not find Y
+list after removes: B, C, D, F, G, H, J, K, L, N, O, P, R, S, T, V, W
+list length = 17
+pop: R
+pop: A
+pop: G
+pop: M
+pop: S
+stack after pops: B, H, N, T, C, I, O, U, D, J, P, V, E, K, Q, W, F, L
+stack size = 18
+list after reverse: W, V, T, S, R, P, O, N, L, K, J, H, G, F, D, C, B

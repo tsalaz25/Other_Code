@@ -1,0 +1,25 @@
+int solve(char sudoku[9][9]){
+  int row, col;
+  char n;
+  for (row = 0; row < 9; row++){
+    for(col = 0; col < 9; col++){
+      if (sudoku[row][col] == 46){
+        for (n = 48; n <= 57; n++){
+          if (validCell(sudoku, row, col, n)){
+            sudoku[row][col] = n;
+            if (solve(sudoku)){
+              boardSolved(sudoku);
+              return 1;
+            }else {
+              sudoku[row][col] = 46;
+            }
+          }
+        }
+        notSolved(sudoku);
+        return 0;
+      }
+    }
+  }
+  boardSolved(sudoku);
+  return 1;
+}

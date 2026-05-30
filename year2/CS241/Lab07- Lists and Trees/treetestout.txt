@@ -1,0 +1,36 @@
+test tree: B C D B E B C F B C D B 
+test tree verbose: (F,1) (E,2) (D,3) (C,4) (B,5) (B,4) (C,3) (B,4) (D,2) (C,3) (B,4) (B,3) 
+tree leaves: B B B B B 
+tree depth = 5
+tree balanced = 1
+tree isBST = 0
+another test tree: B C D E B F B C G B C D 
+another test tree verbose: (G,1) (F,2) (E,3) (D,4) (C,5) (B,6) (B,4) (C,3) (B,4) (D,2) (C,3) (B,4) 
+tree leaves: B B B B 
+tree depth = 6
+tree balanced = 0
+tree isBST = 0
+notBST: A C H E D G J 
+notBST verbose: (E,1) (C,2) (A,3) (H,3) (G,2) (D,3) (J,3) 
+notBST leaves: A H D J 
+notBST depth = 3
+notBST balanced = 1
+notBST isBST = 0
+empty tree: 
+empty tree verbose: 
+filled BST: A B C D E F G H I J K L M N O P Q R S T U V W 
+filled BST verbose: (L,1) (F,2) (E,3) (D,4) (C,5) (B,6) (A,7) (K,3) (J,4) (I,5) (H,6) (G,7) (W,2) (Q,3) (P,4) (O,5) (N,6) (M,7) (V,4) (U,5) (T,6) (S,7) (R,8) 
+BST leaves: A G M R 
+BST depth = 8
+BST minimum value = A
+BST balanced = 0
+BST isBST = 1
+remove did not find =
+remove did not find Y
+BST after removes: B C D F G H J K L N O P R S T V W 
+BST after removes verbose: (L,1) (F,2) (D,3) (C,4) (B,5) (K,3) (J,4) (H,5) (G,6) (W,2) (R,3) (P,4) (O,5) (N,6) (V,4) (T,5) (S,6) 
+BST leaves: B G N S 
+BST depth = 6
+BST minimum value = B
+BST balanced = 0
+BST isBST = 1

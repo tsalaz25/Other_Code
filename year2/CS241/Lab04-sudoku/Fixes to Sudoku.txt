@@ -1,0 +1,19 @@
+Fixes to Sudoku
+-Remove initBoard method
+ 
+-In Main, use getchar to populate sudokuIn, then call init board populating the 2D grid with the same value so the previous code is compatible.
+-Rember ot use the Ascii Value to read in the chars
+
+-Logically speaking, we can count the chars untile there is a '\n' which at that point, the numebr of chars must be 81 to be a valid input. To be a valid char the ascii valu emust be 46 or in range of 1-9. Once there is a newline we can call the solve method using the inforation available 
+
+-Once we have either the answer or the an error, we can use a 'bool' value as an argumetn in a method that will handle the output (either the answer or error) and reset the board. 
+
+This shoudl all happen ina  while loop (c != EOF) so that way whent he end is reached the progam will stop. And the logic for erasing the previous game and starting a new one will be handled thorugh method calls that are nested and chained together
+
+
+Next Set of Fixes
+-Make sure to compare char ascii valr rathe than ints
+
+-when there is a soltion, fix the printing so it is in a stright line
+
+-some solutoins dont show up, so review solve method and solversetup. 
