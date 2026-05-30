@@ -1,0 +1,14 @@
+1
+
+1,oven
+1,grill
+1,saladbar
+
+pizza,oven,2000
+burger,grill,1000
+hotdog,grill,500
+salad,saladbar,100
+
+pizza
+pizza
+salad

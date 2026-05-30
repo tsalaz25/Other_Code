@@ -1,0 +1,161 @@
+package GUI;
+
+import javafx.application.Application;
+import javafx.geometry.Orientation;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+public class Display extends Application {
+    BorderPane root;
+    HBox otherInfo;
+    FlowPane arena;
+    HBox humanHand;
+    private int clickIndex;
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        root = new BorderPane();
+        otherInfo = new HBox();
+        arena = new FlowPane();
+        humanHand = new HBox();
+
+        root.setPrefSize(1500,500);
+        otherInfo.setPrefSize(1500,100);
+        arena.setPrefSize(1500,200);
+        arena.setOrientation(Orientation.VERTICAL);
+        humanHand.setPrefSize(1500,200);
+
+        root.setTop(otherInfo);
+        root.setCenter(arena);
+        root.setBottom(humanHand);
+
+    }
+
+    public void updateGameGUI(Manager M) {
+        root.getChildren().clear();
+        /*Updating Info*/
+        Label info = new Label("Boneyard has " + M.getBoneyardSize() +
+        " Dominos\t Computer has " + M.getCompSize() + " Dominos");
+        otherInfo.getChildren().add(info);
+
+        /*Updating the Human Hand*/
+        for (int i = 0; i < M.getHuman().getHand().size(); i++){
+            HBox domino = createDomino(M.getHuman().getHand().remove() ,i);
+            humanHand.getChildren().addFirst(domino);
+            i++;
+        }
+        /*Updating the Arena*/
+        HBox stagger = new HBox();
+        stagger.setPrefSize(50,50);
+        HBox arenaTop = new HBox();
+        HBox arenaBottom = new HBox();
+        arenaTop.setPrefSize(1500,100);
+        arenaBottom.setPrefSize(1500,100);
+        /*Adding the Stagger*/
+        if (M.getArenaManager().getAnchorIndex()%2==0){
+            arenaBottom.getChildren().add(stagger);
+        } else {
+            arenaTop.getChildren().add(arenaBottom);
+        }
+        /*For Loop similar to printing the arena in the Arena Class*/
+        for (int i = 0; i < M.getArenaManager().getArena().size(); i++){
+            if (i%2 == 0){
+                arenaTop.getChildren().add
+                (createDomImage(M.getArenaManager().getArena().remove(i)));
+            } else {
+                arenaBottom.getChildren().add
+                (createDomImage(M.getArenaManager().getArena().remove(i)));
+            }
+        }
+        /*Putting the HBox representations in the Arena Node*/
+        arena.getChildren().add(arenaTop);
+        arena.getChildren().add(arenaBottom);
+    }
+
+    private HBox createDomImage (Domino D){
+        HBox dom = new HBox();
+        Label L = new Label(intToString(D.getLeft()));
+        Label R = new Label(intToString(D.getRight()));
+        L.setPrefSize(50,50);
+        R.setPrefSize(50,50);
+        dom.getChildren().addAll(L, R);
+        return dom;
+    }
+
+    private HBox createDomino(Domino D,int i) {
+        HBox domino = new HBox();
+        Label L = new Label(intToString(D.getLeft()));
+        Label R = new Label(intToString(D.getRight()));
+        L.setPrefSize(50,50);
+        R.setPrefSize(50,50);
+        domino.getChildren().addAll(L, R);
+        /*If a Domino is clicked on , it saves the index when it was created*/
+        domino.setOnMouseClicked((MouseEvent event) -> {
+            setClickIndex(i);
+        });
+        return domino;
+    }
+
+    private String intToString(int i) {
+        switch (i) {
+            case 0-> {return "   \n   \n   ";}
+            case 1-> {return "   \n * \n   ";}
+            case 2-> {return "   *n   \n*  ";}
+            case 3-> {return "   *n * \n*  ";}
+            case 4-> {return "* *\n   \n* *";}
+            case 5-> {return "* *\n * \n* *";}
+            case 6-> {return "* *\n* *\n* *";}
+        }
+        return String.valueOf(i);
+    }
+
+    private void setClickIndex(int i) {clickIndex = i;}
+    public int getClickIndex() {return clickIndex;}
+    public static void show() {launch();}
+}
+
+package GUI;
+
+public class Main {
+    public static void main (String args[]) throws Exception {
+        Manager manager;
+        if (args.length == 0){
+            manager = new Manager(6); //No Args Case
+        } else if (args.length == 1 && Integer.parseInt(args[0]) < 10){
+            manager = new Manager(Integer.parseInt(args[0])); //CLI Arg
+        } else {
+            throw new Exception("Invalid Argument, Only 1 argument and must be <10\n");
+        }
+        Display display = new Display();
+
+        /*Need to Rework with the GUI Elements*/
+        while (!manager.isGameOver){
+            manager.printGameInfo();
+            /*Must be Either of these Cases*/
+            if (manager.HumanTurn){
+                manager.printHumanInfo();
+                if (manager.isHumanMoveAvail()){
+                    display.updateGameGUI(manager);
+                    manager.humanMove(display.getClickIndex());
+
+                    if (manager.isGameOver){
+                        manager.gameOverMessage();}
+                } else {
+                    System.out.println("No Moves Available, Pulling From Boneyard");
+                    manager.giveDomToHuman();
+                }
+            }
+
+            else if (!manager.HumanTurn){
+                manager.printCompInfo();
+                manager.makeCompMove();
+                if (manager.isGameOver){manager.gameOverMessage();}
+            }
+        }
+        System.exit(0);
+    }
+}

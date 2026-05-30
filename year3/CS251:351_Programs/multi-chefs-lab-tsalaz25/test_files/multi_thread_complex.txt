@@ -1,0 +1,50 @@
+6
+
+2,oven
+2,grill
+2,saladbar
+1,pasta station
+1,deep fryer
+1,stove
+
+pizza,oven,1200
+burger,grill,800
+hotdog,grill,600
+salad,saladbar,400
+spaghetti,pasta station,1400
+fries,deep fryer,500
+stir fry,stove,1100
+lasagna,oven,1500
+grilled cheese,grill,700
+caesar salad,saladbar,500
+fried chicken,deep fryer,900
+risotto,stove,1600
+
+pizza
+burger
+hotdog
+salad
+spaghetti
+fries
+stir fry
+lasagna
+grilled cheese
+caesar salad
+fried chicken
+risotto
+pizza
+lasagna
+spaghetti
+fries
+stir fry
+grilled cheese
+burger
+hotdog
+caesar salad
+fried chicken
+risotto
+salad
+pizza
+burger
+lasagna
+spaghetti

@@ -11,7 +11,7 @@ This is a compilation of some of the code I have written during my 4 years at UN
 ### Fall 25
 - C341L: Intro to Computer Architecture and Organization
 - CS361L: Data Structures and Algorithms I
-- CS444: Intro to Parallel Processing
+- CS442: Intro to Parallel Processing
 - CS460: Software Engineering
 
 ## Year 3

@@ -1,0 +1,40 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red170\green171\blue37;\red86\green32\blue244;
+\red57\green192\blue38;\red199\green199\blue199;\red202\green51\blue35;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c72331\c71682\c18599;\cssrgb\c41681\c25958\c96648;
+\cssrgb\c25706\c77963\c19557;\cssrgb\c82112\c82112\c82112;\cssrgb\c83899\c28663\c18026;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \CocoaLigature0 Dump of assembler code for function \cf3 phase_2\cf2 :\
+   \cf4 0x0000000000400f49\cf2  <+0>:	\cf5 push\cf6    \cf7 %rbp\cf2 \
+   \cf4 0x0000000000400f4a\cf2  <+1>:	\cf5 push\cf6    \cf7 %rbx\cf2 \
+   \cf4 0x0000000000400f4b\cf2  <+2>:	\cf5 sub\cf6     \cf7 $0x28\cf2 ,\cf7 %rsp\cf2 \
+   \cf4 0x0000000000400f4f\cf2  <+6>:	\cf5 mov\cf6     \cf7 %fs\cf2 :\cf4 0x28\cf2 ,\cf7 %rax\cf2 \
+   \cf4 0x0000000000400f58\cf2  <+15>:	\cf5 mov\cf6     \cf7 %rax\cf2 ,\cf4 0x18\cf2 (\cf7 %rsp\cf2 )\
+   \cf4 0x0000000000400f5d\cf2  <+20>:	\cf5 xor\cf6     \cf7 %eax\cf2 ,\cf7 %eax\cf2 \
+   \cf4 0x0000000000400f5f\cf2  <+22>:	\cf5 mov\cf6     \cf7 %rsp\cf2 ,\cf7 %rsi\cf2 \
+   \cf4 0x0000000000400f62\cf2  <+25>:	\cf5 call\cf6    \cf4 0x4016a8\cf2  <\cf7 read_six_numbers\cf2 >\
+=> \cf4 0x0000000000400f67\cf2  <+30>:	\cf5 cmpl\cf6    \cf7 $0x0\cf2 ,(\cf7 %rsp\cf2 )\
+   \cf4 0x0000000000400f6b\cf2  <+34>:	\cf5 jns\cf6     \cf4 0x400f72\cf2  <\cf7 phase_2\cf2 +\cf4 41\cf2 >\
+   \cf4 0x0000000000400f6d\cf2  <+36>:	\cf5 call\cf6    \cf4 0x401672\cf2  <\cf7 explode_bomb\cf2 >\
+   \cf4 0x0000000000400f72\cf2  <+41>:	\cf5 mov\cf6     \cf7 %rsp\cf2 ,\cf7 %rbp\cf2 \
+   \cf4 0x0000000000400f75\cf2  <+44>:	\cf5 mov\cf6     \cf7 $0x1\cf2 ,\cf7 %ebx\cf2 \
+   \cf4 0x0000000000400f7a\cf2  <+49>:	\cf5 mov\cf6     \cf7 %ebx\cf2 ,\cf7 %eax\cf2 \
+   \cf4 0x0000000000400f7c\cf2  <+51>:	\cf5 add\cf6     \cf4 0x0\cf2 (\cf7 %rbp\cf2 ),\cf7 %eax\cf2 \
+   \cf4 0x0000000000400f7f\cf2  <+54>:	\cf5 cmp\cf6     \cf7 %eax\cf2 ,\cf4 0x4\cf2 (\cf7 %rbp\cf2 )\
+   \cf4 0x0000000000400f82\cf2  <+57>:	\cf5 je\cf6      \cf4 0x400f89\cf2  <\cf7 phase_2\cf2 +\cf4 64\cf2 >\
+   \cf4 0x0000000000400f84\cf2  <+59>:	\cf5 call\cf6    \cf4 0x401672\cf2  <\cf7 explode_bomb\cf2 >\
+   \cf4 0x0000000000400f89\cf2  <+64>:	\cf5 add\cf6     \cf7 $0x1\cf2 ,\cf7 %ebx\cf2 \
+   \cf4 0x0000000000400f8c\cf2  <+67>:	\cf5 add\cf6     \cf7 $0x4\cf2 ,\cf7 %rbp\cf2 \
+   \cf4 0x0000000000400f90\cf2  <+71>:	\cf5 cmp\cf6     \cf7 $0x6\cf2 ,\cf7 %ebx\cf2 \
+   \cf4 0x0000000000400f93\cf2  <+74>:	\cf5 jne\cf6     \cf4 0x400f7a\cf2  <\cf7 phase_2\cf2 +\cf4 49\cf2 >\
+   \cf4 0x0000000000400f95\cf2  <+76>:	\cf5 mov\cf6     \cf4 0x18\cf2 (\cf7 %rsp\cf2 ),\cf7 %rax\cf2 \
+   \cf4 0x0000000000400f9a\cf2  <+81>:	\cf5 xor\cf6     \cf7 %fs\cf2 :\cf4 0x28\cf2 ,\cf7 %rax\cf2 \
+   \cf4 0x0000000000400fa3\cf2  <+90>:	\cf5 je\cf6      \cf4 0x400faa\cf2  <\cf7 phase_2\cf2 +\cf4 97\cf2 >\
+   \cf4 0x0000000000400fa5\cf2  <+92>:	\cf5 call\cf6    \cf4 0x400b90\cf2  <\cf7 __stack_chk_fail@plt\cf2 >\
+   \cf4 0x0000000000400faa\cf2  <+97>:	\cf5 add\cf6     \cf7 $0x28\cf2 ,\cf7 %rsp\cf2 \
+   \cf4 0x0000000000400fae\cf2  <+101>:	\cf5 pop\cf6     \cf7 %rbx\cf2 \
+   \cf4 0x0000000000400faf\cf2  <+102>:	\cf5 pop\cf6     \cf7 %rbp\cf2 \
+   \cf4 0x0000000000400fb0\cf2  <+103>:	\cf5 ret}

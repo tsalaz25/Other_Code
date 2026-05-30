@@ -1,0 +1,1 @@
+build: gcc -std=c11 -O2 -Wall -Wextra -pedantic csim.c cachelab.c -o csim 

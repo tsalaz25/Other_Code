@@ -1,0 +1,17 @@
+Phase 1 and Phase 2: Canvas Videos
+
+(1) https://en.wikipedia.org/wiki/JMP_(x86_instruction)
+
+(2) https://www.thesecuritybuddy.com/reverse-engineering/what-is-fs0x28-in-x86-assembly/
+
+(3) https://cseweb.ucsd.edu/~efernandes/teaching/res/how-canaries-work.pdf
+
+(4) https://www.cs.auckland.ac.nz/references/macvax/op-codes/Instructions/movz.html
+
+(5) https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf
+
+(6) https://www.ascii-code.com
+
+(7) https://www.cs.sfu.ca/~ashriram/Courses/CS295/tutorials/gdb/gdb.html
+
+(8) https://www.youtube.com/watch?v=bWH-nL7v5F4
